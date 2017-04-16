@@ -2,9 +2,10 @@
 
 $(document).ready(function() {
     // register our function as the "callback" to be triggered by the form's submission event
-    $("#form-gif-request").submit(fetchAndDisplayGif); // in other words, when the form is submitted, fetchAndDisplayGif() will be executed
-});
+   
+   $("#form-gif-request").submit(fetchAndDisplayGif); // in other words, when the form is submitted, fetchAndDisplayGif() will be executed
 
+});
 
 /**
  * sends an asynchronous request to Giphy.com aksing for a random GIF using the 
@@ -26,7 +27,11 @@ function fetchAndDisplayGif(event) {
         api_key: "dc6zaTOxFJmzC", 
         tag : "jackson 5" + searchQuery // TODO should be e.g. "jackson 5 dance"
     };
-    
+    //Validation 
+    var number = $('#check').val();
+        if (number != 5){
+            $('#checkError').text("No gifs for you");
+        }else{
     // make an ajax request for a random GIF
     var gifUrl = 'https://api.giphy.com/v1/gifs/random';
     $.ajax({
@@ -51,18 +56,27 @@ function fetchAndDisplayGif(event) {
             $("#feedback").text("Sorry, could not load GIF. Try again!");
             setGifLoadedStatus(false);
         }
-    });
     
+    });
+        
     // TODO
     // give the user a "Loading..." message while they wait
     
     $('#feedback').text("Loading...");
     setGifLoadedStatus(false);
-    // $('#gif').load(){
-    //     $('#loading').remove();
-    // };
-    
+        }
 }
+
+// validation (){
+var jacksonVal = $('#check').val();
+console.log(jacksonVal);
+//     if (jacksonVal === 5){
+//         return true;
+//     }else{
+//         $('#checkError').text('No gifs for you');
+//     }
+// }
+
 
 
 /**

@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The AJAXson 5</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
+    <link rel="stylesheet" type="text/css" href="ajaxson.css">
 </head>
 <body>
-    <h1>The AJAXson 5</h1>
+    <h1 id="title">The AJAXson 5</h1>
 
     <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?</label>
-        <input id="tag" name="tag" type="text"/>
+        <label id="question1">What kind of Jackson 5 related gif do you want?</label>
+        <div id="tag-css">
+            <input id="tag" name="tag" type="text"/>
+        </div>
+    </form>
+    <div>
+
+    </div>
+    <div id="question2">
+        <label>Prove you are not a robot by answering this riddle:</label>
         <div>
-            <label>Prove you are not a robot by answering this riddle:</label>
             <input id="check" name="check" type="text"/>
             <label><strong>Jacksons are better than 1</strong></label>
+            <div id="checkError"></div>
         </div>
-        <input type="submit" value="Get my Gif!" />
-    </form>
+    </div>
+
+    <input id="gif-button" type="submit" value="Get my Gif!" />
+    
     <div id="loading"></div>
     <img id="gif" src="" hidden="true"/>
     <p id="feedback" hidden="true"></p>
