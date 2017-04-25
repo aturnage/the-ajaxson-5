@@ -29,8 +29,12 @@ function fetchAndDisplayGif(event) {
     };
     //Validation 
     var number = $('#check').val();
+    console.log(number);
         if (number != 5){
-            $('#checkError').text("No gifs for you");
+    
+            $("#feedback").text("HA! HA! HA! Naw PLAYA, No gifs for you. You know how many Jacksons there are...Try Again!").css('color', 'red');
+            setGifLoadedStatus(false);
+            
         }else{
     // make an ajax request for a random GIF
     var gifUrl = 'https://api.giphy.com/v1/gifs/random';
@@ -62,20 +66,12 @@ function fetchAndDisplayGif(event) {
     // TODO
     // give the user a "Loading..." message while they wait
     
-    $('#feedback').text("Loading...");
+    $('#feedback').text("Loading...").css('color', 'black');
     setGifLoadedStatus(false);
-        }
-}
 
-// validation (){
-var jacksonVal = $('#check').val();
-console.log(jacksonVal);
-//     if (jacksonVal === 5){
-//         return true;
-//     }else{
-//         $('#checkError').text('No gifs for you');
-//     }
-// }
+    
+        }
+};
 
 
 

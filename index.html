@@ -8,29 +8,27 @@
     <link rel="stylesheet" type="text/css" href="ajaxson.css">
 </head>
 <body>
-    <h1 id="title">The AJAXson 5</h1>
-
+        <h1 id="title">The AJAXson 5</h1>
     <form id="form-gif-request" />
         <label id="question1">What kind of Jackson 5 related gif do you want?</label>
         <div id="tag-css">
             <input id="tag" name="tag" type="text"/>
         </div>
-    </form>
+    
     <div>
 
     </div>
     <div id="question2">
-        <label>Prove you are not a robot by answering this riddle:</label>
+        <label id="question2text">Prove you are not a robot by answering this riddle:</label>
         <div>
             <input id="check" name="check" type="text"/>
-            <label><strong>Jacksons are better than 1</strong></label>
+            <label id="valverb"><strong>Jacksons are better than 1</strong></label>
             <div id="checkError"></div>
         </div>
     </div>
 
     <input id="gif-button" type="submit" value="Get my Gif!" />
-    
-    <div id="loading"></div>
+    </form>
     <img id="gif" src="" hidden="true"/>
     <p id="feedback" hidden="true"></p>
 

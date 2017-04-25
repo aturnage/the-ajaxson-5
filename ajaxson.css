@@ -1,7 +1,14 @@
+body {
+    margin: 0;
+    max-height: 100%;
+}
 /*title*/
 #title{
     background-color: #ebebec;
+    background-repeat: no-repeat;
     height: 100px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 /*Submit button*/
 #gif-button {
@@ -10,15 +17,18 @@
     color: white;
     height: 30px;
     box-shadow: none;
+    margin: 10px;
+    /*border-style: none;*/
 }
 /*Form*/
 #form-gif-request {
     background-color: #ebebec;
     border-radius: 5px;
+    margin: 10px;
+    padding: 10px, 0px, 0px, 10px;
 }
 /*Search input line*/
 #tag {
-    max-width: 100%;
     border-radius: 5px;
 }
 /*Search input line*/
@@ -30,9 +40,20 @@
 #question2 {
     background-color: #ebebec;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px;
 }
 /*Question 1 inside the form*/
 #question1 {
-    padding: 10px, 0px, 0px, 10px;
+    margin: 10px;
+    border-top: 10px;
+}
+#question2text {
+     margin: 10px;
+}
+#check {
+     margin: 10px;
+     border-radius: 5px;
+}
+#valverb {
+    margin: 0px;
 }
